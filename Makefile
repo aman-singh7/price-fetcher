@@ -3,3 +3,8 @@ build:
 
 run: build
 	@./bin/pricefetcher
+
+proto:
+	@protoc --go_out=plugins=grpc:. ./**/*.proto
+
+.PHONY: proto
